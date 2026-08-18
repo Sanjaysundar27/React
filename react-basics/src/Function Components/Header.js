@@ -19,7 +19,7 @@ export default function Header(){
         <div>
                 {/* <h1 style={myStyle}>Hello Styling</h1> */}
                 <h1 className={styles.bigBlue}>Hello Styling</h1>
-                <p> Add a Little style</p>
+                <p className={styles.l}> Add a Little style</p>
         </div>
     );
 }
