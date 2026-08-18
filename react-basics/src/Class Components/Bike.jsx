@@ -7,11 +7,12 @@ constructor(){
         this.state = { color : "Black"  }
 }
     render(){
-        return
+        return(
         <div>
             <h1>My Bike Color is {this.state.color}</h1>
                 <button onClick={ ()=> { this.setState( {color : "Black And Red"} )}}>Change Color </button>
         </div>
+            );
     }
 }
 
