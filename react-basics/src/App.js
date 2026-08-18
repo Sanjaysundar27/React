@@ -13,9 +13,9 @@ function App() {
 
   return (
     <div>
+      <Header />
       <h1>React Training....from App.js</h1>
       <Garage />
-      <Header />
       <Apple  appleInfo = {appleInfo}/>
     </div>
   );
