@@ -4,6 +4,7 @@ import Garage from './Function Components/Garage';
 import Apple from './Class Components/Apple';
 import Header from './Function Components/Header';
 import FavoriteColor from './Function Components/FavoriteColor';
+import Bike from './Class Components/Bike';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       <Garage />
       <Apple  appleInfo = {appleInfo}/>
       <FavoriteColor/>
-      <Bike/>
+      <Bike/>  
     </div>
   );
 }

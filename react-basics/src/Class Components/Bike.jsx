@@ -14,3 +14,5 @@ constructor(){
         </div>
     }
 }
+
+export default Bike;
