@@ -27,7 +27,7 @@ function App() {
       <Bike/>  
       <Scooter/>
       <List/>
-      <Timer/>
+      {/* <Timer/> */}
 
     </div>
   );
