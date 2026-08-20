@@ -9,6 +9,7 @@ import Scooter from './Function Components/Scooter';
 import List from './Function Components/List';
 import Timer from './Function Components/Timer';
 
+
 function App() {
 
   const appleInfo = {
@@ -27,6 +28,7 @@ function App() {
       <Scooter/>
       <List/>
       <Timer/>
+
     </div>
   );
 }
