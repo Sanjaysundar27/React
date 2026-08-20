@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Car from './Function Components/Car';
+import MyForm from './Function Components/MyForm';
 
 function Garage() {
   return (
@@ -17,6 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <MyForm/>
   </React.StrictMode>
 );
 
