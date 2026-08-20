@@ -5,6 +5,9 @@ import Apple from './Class Components/Apple';
 import Header from './Function Components/Header';
 import FavoriteColor from './Function Components/FavoriteColor';
 import Bike from './Class Components/Bike';
+import Scooter from './Function Components/Scooter';
+import List from './Function Components/List';
+import Timer from './Function Components/Timer';
 
 function App() {
 
@@ -21,6 +24,9 @@ function App() {
       <Apple  appleInfo = {appleInfo}/>
       <FavoriteColor/>
       <Bike/>  
+      <Scooter/>
+      <List/>
+      <Timer/>
     </div>
   );
 }
