@@ -13,13 +13,24 @@ export default function MyForm() {
         console.log("Current State", input);
     }
 
+    function handleChange(e) {
+        const name = e.target.name;
+        const value = e.target.value;
+        setInput((pre) => {
+            return {
+                ...pre,
+                [name]: value
+            }
+        });
+    }
+
     return (
 
         <form onSubmit={handleSubmit}>
 
-            <label> Enter your name : <input type="text" onChange={(e) => { setInput((pre) => { return { ...pre, name: e.target.value } }) }} /></label><br />
-            <label> Enter your Email : <input type="email" onChange={(e) => { setInput((pre) => { return { ...pre, email: e.target.value } }) }} /></label><br />
-            <label> Enter your Phone No : <input type="tel" onChange={(e) => { setInput((pre) => { return { ...pre, phone_no: e.target.value } }) }} /></label><br />
+            <label> Enter your name : <input type="text" name="Name" onChange={handleChange} /></label><br />
+            <label> Enter your Email : <input type="email" name="Email" onChange={handleChange} /></label><br />
+            <label> Enter your Phone No : <input type="tel" name="Phone_no" onChange={handleChange} /></label><br />
             <input type="submit" value="Submit form" />
 
         </form>
