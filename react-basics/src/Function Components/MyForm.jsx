@@ -1,28 +1,47 @@
-import { useState } from "react"
+    import { useState } from "react"
 
 
-export default function MyForm() {
-    //const [name, setName] = useState("");
+    export default function MyForm() {
+        //const [name, setName] = useState("");
 
-    const [input, setInput] = useState({});
+        const [input, setInput] = useState({ Phone: "+91", Email: "@gmail.com" , About : "I am a Unemployee (VIP)" });
 
-    function handleSubmit(e) {
-        e.preventDefault();//This is for donot refersh the browser after submiting the value in input box
-        console.log("form Submited");
-        // console.log("current State : ", name);
-        console.log("Current State", input);
+
+        function handleSubmit(e) {
+            e.preventDefault();//This is for donot refersh the browser after submiting the value in input box
+            console.log("form Submited");
+            // console.log("current State : ", name);
+            console.log("Current State", input);
+        }
+
+    function handleChange(e) {
+        const { name, value } = e.target;
+        setInput((prev) => ({
+            ...prev,
+            [name]: value
+        }));
     }
 
-    return (
 
-        <form onSubmit={handleSubmit}>
+        return (
 
-            <label> Enter your name : <input type="text" onChange={(e) => { setInput((pre) => { return { ...pre, name: e.target.value } }) }} /></label><br />
-            <label> Enter your Email : <input type="email" onChange={(e) => { setInput((pre) => { return { ...pre, email: e.target.value } }) }} /></label><br />
-            <label> Enter your Phone No : <input type="tel" onChange={(e) => { setInput((pre) => { return { ...pre, phone_no: e.target.value } }) }} /></label><br />
-            <input type="submit" value="Submit form" />
+            <form onSubmit={handleSubmit}>
 
-        </form>
+                <label> Enter your name : <input type="text" name="Name" onChange={handleChange} /></label><br />
+                <label> Enter your Email : <input type="email" name="Email" onChange={handleChange} value={input.Email} /></label><br />
+                <label> Enter your Phone No : <input type="tel" name="Phone" onChange={handleChange} value={input.Phone} /></label><br />
 
-    );
-}
+                <label>Select your country <select name="country" onChange={handleChange} value={input.country}>
+                    <option value="">Select</option>
+                    <option value="Australia">Australia</option>
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                </select>
+                </label><br/>
+                <label>Enter About you : <textarea name="About" value={input.About} onChange={handleChange} /></label><br/>
+                <input type="submit" value="Submit form" />
+
+            </form>
+ 
+        );
+    }
